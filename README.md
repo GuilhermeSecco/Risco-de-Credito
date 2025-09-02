@@ -21,8 +21,10 @@ O script gerar_previsoes.py aplica o modelo treinado em novos_dados.csv. Após i
 
 ### Dashboard Interativo
 
+<img width="962" height="550" alt="image" src="https://github.com/user-attachments/assets/44dfaa94-6cc2-463a-bf3d-a811450cf10f" />
+<br>
 O arquivo Dashboard.pbix (Power BI) apresenta indicadores como:
-
+   
     Total emprestado, recebido e saldo devedor;
     
     Probabilidade de fraude por contrato;
