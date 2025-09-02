@@ -13,6 +13,9 @@
 
 ##  ⚙️ Como funciona
 
+### Importando o Dataset
+  O script gerar_modelo.py carrega o dataset por meio da conexão entre python e sql
+
 ### Treinamento do Modelo
   O script gerar_modelo.py treina um modelo de Random Forest com base no histórico de empréstimos, em seguida o modelo é salvo em modelo_treinado_fraude.pk.
 ### Previsão em Novos Dados
@@ -44,6 +47,8 @@ O arquivo Dashboard.pbix (Power BI) apresenta indicadores como:
 ## 🚀 Tecnologias Utilizadas
 
     Python (pandas, scikit-learn, numpy)
+
+    MySQL
 
     Machine Learning: Random Forest Classifier
 
