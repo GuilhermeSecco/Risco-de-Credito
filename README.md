@@ -15,6 +15,7 @@
 
 ### Importando o Dataset
   O script gerar_modelo.py carrega o dataset por meio da conexão entre python e sql
+  Os dados armazenados no Connection.py são necessários para uma conexão ocorrer, nesse projeto eles estão vazios por segurança
 
 ### Treinamento do Modelo
   O script gerar_modelo.py treina um modelo de Random Forest com base no histórico de empréstimos, em seguida o modelo é salvo em modelo_treinado_fraude.pk.
