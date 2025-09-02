@@ -1,6 +1,8 @@
 def criacao_treinamento_modelo():
     import pandas as pd
     import numpy as np
+    import mysql.connector as sql
+    import Connection
 
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.model_selection import train_test_split
@@ -9,7 +11,12 @@ def criacao_treinamento_modelo():
     from imblearn.over_sampling import SMOTE
     import joblib
 
-    df_original = pd.read_csv("dados_coletados.csv")
+    conexao = sql.CMySQLConnection(host='localhost',
+                                   user=Connection.User(),
+                                   password=Connection.Password(),
+                                   database='risco_credito')
+
+    df_original = pd.read_sql('SELECT * FROM dados_coletados', conexao)
 
     df_original['Estado_Civil'] = df_original['Estado_Civil'].replace(['NENHUM'], 'OUTRO')
     df_original['Estado_Civil'] = df_original['Estado_Civil'].replace(['UNIÃO ESTAVEL'], 'CASADO (A)')
