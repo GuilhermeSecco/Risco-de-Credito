@@ -1,18 +1,20 @@
 # 💳 Modelo de risco de Crédito
   Este projeto tem como objetivo avaliar o risco de crédito e prever a probabilidade de fraude em empréstimos utilizando Machine Learning. Além disso, os resultados são apresentados em um dashboard interativo no Power BI, facilitando a análise de risco por parte de gestores e analistas financeiros.
 
-## Link do Dashboard:
-  [Dashboard Interativo](https://app.powerbi.com/groups/me/reports/6513b484-a3eb-44a6-aaa1-42ba68dc71f5/aee932d08b9bc93b5870?ctid=ba201131-9621-49ca-b50d-57d968b4ac35&experience=power-bi&bookmarkGuid=b05b7c5b-be2a-4897-8862-7938efef6bd1)
+## Dashboard Online
+  [Acesse o Dashboard Interativo no Power BI](https://app.powerbi.com/groups/me/reports/6513b484-a3eb-44a6-aaa1-42ba68dc71f5/aee932d08b9bc93b5870?ctid=ba201131-9621-49ca-b50d-57d968b4ac35&experience=power-bi&bookmarkGuid=b05b7c5b-be2a-4897-8862-7938efef6bd1)
 
 ## 📂 Estrutura do Repositório
-    ├── dados_coletados.csv       # Base de dados utilizada no treinamento
-    ├── novos_dados.csv           # Novos empréstimos para previsão
-    ├── gerar_modelo.py           # Script para treinar o modelo de Random Forest
-    ├── gerar_previsoes.py        # Script para executar o modelo em novos dados
-    ├── modelo_treinado_fraude.pk # Modelo treinado salvo
-    ├── previsoes_fraude.xlsx     # Resultado das previsões em planilha
-    ├── Dashboard.pbix            # Dashboard interativo em Power BI
-    ├── Dashboard.pdf             # Versão em PDF do dashboard
+    ├── Connection.py # Configura a conexão com banco MySQL (oculto por segurança)
+    ├── dados_coletados.csv # Base de dados utilizada no treinamento
+    ├── novos_dados.csv # Novos empréstimos para previsão
+    ├── gerar_modelo.py # Script para treinar o modelo de Random Forest
+    ├── gerar_previsoes.py # Script para aplicar o modelo em novos dados
+    ├── modelo_treinado_fraude.pk # Modelo salvo (Random Forest)
+    ├── previsoes_fraude.xlsx # Saída com probabilidades de fraude
+    ├── Dashboard.pbix # Dashboard interativo em Power BI
+    ├── Dashboard.pdf # Versão em PDF do dashboard
+    └── README.md # Documentação do projeto
 
 ##  ⚙️ Como funciona
 
@@ -50,11 +52,11 @@ O arquivo Dashboard.pbix (Power BI) apresenta indicadores como:
 
 ## 🚀 Tecnologias Utilizadas
 
-    Python (pandas, scikit-learn, numpy)
+    Python (pandas, scikit-learn, numpy) para analise, tratamento e modelagem dos dados.
 
-    MySQL
+    MySQL para armazenamento dos dados
 
-    Machine Learning: Random Forest Classifier
+    Machine Learning: Random Forest Classifier para analise preditiva
 
     Power BI para visualização dos dados
 
