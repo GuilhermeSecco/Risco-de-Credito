@@ -5,7 +5,7 @@ def gerar_previsoes_modelo():
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import LabelEncoder
-    from sklearn.metrics import mean_squared_error, precision_score, f1_score
+    from sklearn.metrics import mean_squared_error, precision_score, f1_score, confusion_matrix
     from imblearn import under_sampling, over_sampling
     from imblearn.over_sampling import  SMOTE
     from sklearn.preprocessing import MinMaxScaler
@@ -73,6 +73,13 @@ def gerar_previsoes_modelo():
 
     df_original.to_excel('previsoes_fraude.xlsx')
     print('Previsões geradas com sucesso!')
+
+    print('Avaliando o Modelo ...')
+    f1 = f1_score(df_original["Possivel_Fraude"], previsoes, pos_label="Sim")
+    f1 = f1 * 100
+    f1 = round(f1, 2)
+    print('\nF1 score: '+ str(f1) + '%')
+    print("\nMatriz de Confusão:\n", confusion_matrix(df_original["Possivel_Fraude"], previsoes))
 
 def main():
     gerar_previsoes_modelo()

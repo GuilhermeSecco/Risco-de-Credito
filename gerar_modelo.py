@@ -9,7 +9,7 @@ def criacao_treinamento_modelo():
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import LabelEncoder, MinMaxScaler
-    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report
+    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report, roc_auc_score
     from imblearn import under_sampling, over_sampling
     from imblearn.over_sampling import SMOTE
     import joblib
