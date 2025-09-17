@@ -50,6 +50,18 @@ O arquivo Dashboard.pbix (Power BI) apresenta indicadores como:
 |322057795715|R$ 3.000,00|25 meses|97%|
 |322057799715|R$ 35.000,00|100 meses|89%|
 
+
+## 📐 Métricas do Modelo
+    Durante o treino:
+    F1-score: 97.84%
+    Matriz de Confusão: [12999   293]
+                        [  285 13130]
+    
+    Utilizando novos dados:
+    F1 score: 95.29%
+    Matriz de Confusão: [11341   870]
+                        [  154 10361]
+
 ## 🚀 Tecnologias Utilizadas
 
     Python (pandas, scikit-learn, numpy) para analise, tratamento e modelagem dos dados.
